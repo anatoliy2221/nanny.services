@@ -1,0 +1,35 @@
+.homeContainer {
+    border-radius: 30px;
+    width: 1376px;
+    height: 736px;
+    background-color: #103931;
+    margin: 0 auto;
+    background-image: url('../assets/backgroundImg.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.titleWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 517px;
+}
+
+.homeTitle {
+
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fbfbfb;
+    margin-bottom: 28px;
+}
+
+.homeSubTitle {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.07;
+    letter-spacing: -0.02em;
+    color: #fbfbfb;
+    margin-bottom: 64px;
+}
