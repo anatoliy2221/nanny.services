@@ -7,12 +7,14 @@
     background-image: url('../assets/backgroundImg.jpg');
     background-position: right;
     background-repeat: no-repeat;
+
 }
 
 .titleWrapper {
     display: flex;
     flex-direction: column;
     width: 517px;
+    margin-left: 96px;
 }
 
 .homeTitle {
@@ -32,4 +34,26 @@
     letter-spacing: -0.02em;
     color: #fbfbfb;
     margin-bottom: 64px;
+}
+
+.btnGetStarted {
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 30px;
+    padding-top: 18px;
+    padding-left: 50px;
+    width: 230px;
+    height: 60px;
+    background-color: inherit;
+
+    font-weight: 500;
+    font-size: 20px;
+
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+    text-align: center;
+    cursor: pointer;
 }

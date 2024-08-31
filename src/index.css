@@ -8,7 +8,6 @@
 
 
 body {
-  width: 1440px;
   background-color: #f3f3f3;
 }
 
@@ -27,4 +26,8 @@ ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }

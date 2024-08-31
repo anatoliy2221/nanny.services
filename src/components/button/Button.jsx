@@ -1,7 +1,18 @@
-import css from './Button.module.css';
+// import IconComponent from '../iconComponent/IconComponent';
+// import css from './Button.module.css';
 
-export const Button = () => {
+export const Button = ({ children, className }) => {
+    console.log(children);
+
+
     return (
-        <button className={css.button} >Get started</button>
+        <>
+            <button className={className}>{children}
+
+
+            </button>
+        </>
     )
 }
+
+{/* <IconComponent width={18} height={18} iconName={'iconArrowUp'} />} */ }
