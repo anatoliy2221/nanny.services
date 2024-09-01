@@ -1,0 +1,40 @@
+.container {
+    width: 284px;
+    height: 118px;
+    padding: 32px;
+    display: flex;
+    gap: 16px;
+    border-radius: 20px;
+    background-color: #fbfbfb;
+    z-index: 1;
+    position: relative;
+    left: 75%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconArea {
+    width: 54px;
+    height: 54px;
+    border-radius: 13px;
+    background-color: #103931;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(17, 16, 28, 0.5);
+}
+
+.counter {
+    font-weight: 700;
+    font-size: 24px;
+    color: #11101c;
+}
