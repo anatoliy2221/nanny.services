@@ -1,10 +1,10 @@
-import { Button } from '../components/button/Button';
-import { ExperiencedNannies } from '../components/experiencedNannies/ExperiencedNannies';
+import Button from '../components/button/Button';
+import ExperiencedNannies from '../components/experiencedNannies/ExperiencedNannies';
 import IconComponent from '../components/iconComponent/IconComponent';
 
 import '../styles/pages.css';
 
-export const Home = () => {
+const Home = () => {
     return (
         <section className='homeContainer'>
 
@@ -18,4 +18,6 @@ export const Home = () => {
             <ExperiencedNannies />
         </section>
     )
-}
+};
+
+export default Home;

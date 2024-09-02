@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
 import css from './RegistrationModalForm.module.css';
-import { Button } from '../button/Button';
+import Button from '../button/Button';
 
-export const RegistrationModalForm = () => {
+const RegistrationModalForm = () => {
 
     const {
         register,
@@ -24,4 +24,6 @@ export const RegistrationModalForm = () => {
             <Button className={css.btn} type="submit" >Sign up</Button>
         </form>
     );
-}
+};
+
+export default RegistrationModalForm;

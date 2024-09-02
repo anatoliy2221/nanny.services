@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Navigation } from './components/navigation/Navigation';
-import { Home } from './pages/Home';
-import { Nannies } from './pages/Nannies';
+import Navigation from './components/navigation/Navigation';
+import Home from './pages/Home';
+import Nannies from './pages/Nannies';
 
 const App = () => {
   return (
