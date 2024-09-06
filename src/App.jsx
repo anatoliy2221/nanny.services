@@ -4,7 +4,7 @@ import Navigation from './components/navigation/Navigation';
 import Home from './pages/Home';
 import Nannies from './pages/Nannies';
 import NotFoundPage from './pages/NotFoundPage';
-import NannyReviews from './components/nannyReviews/nannyReviews';
+import NannyReviews from './components/nannyReviews/NannyReviews';
 
 const App = () => {
   return (
