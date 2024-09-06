@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../../src/styles/pages.css';
+import { Link, Outlet } from 'react-router-dom';
+import Filters from '../components/filters/Filters';
 
 const Nannies = () => {
     const [nannies, setNannies] = useState([]);
@@ -23,6 +25,7 @@ const Nannies = () => {
 
     return (
         <div className="nannyContainer">
+            <Filters />
             {nannies.length > 0 ? (
                 <ul>
                     {nannies.map((nanny, index) => (
@@ -54,35 +57,46 @@ const Nannies = () => {
                                 </div>
                                 <ul className="nannyPropertiesList">
                                     <li className="nannyPropertiesItem">
-                                        <p>Age</p>
+                                        <p className="nannyPropertiesText">
+                                            Age:{' '}
+                                            <span className="propertiesItemValue">
+                                                {new Date().getFullYear() -
+                                                    new Date(nanny.birthday).getFullYear()}
+                                            </span>
+                                        </p>
                                     </li>
                                     <li className="nannyPropertiesItem">
-                                        <p className='nannyPropertiesText'>
-                                            Experience:
+                                        <p className="nannyPropertiesText">
+                                            Experience:{' '}
                                             <span className="propertiesItemValue">
                                                 {nanny.experience}
                                             </span>
                                         </p>
                                     </li>
                                     <li className="nannyPropertiesItem">
-                                        <p className='nannyPropertiesText'>
-                                            kids_age:
+                                        <p className="nannyPropertiesText">
+                                            kids_age:{' '}
                                             <span className="propertiesItemValue">
                                                 {nanny.kids_age}
                                             </span>
                                         </p>
                                     </li>
                                     <li className="nannyPropertiesItem">
-                                        <p className='nannyPropertiesText'>
-                                            Characters:
+                                        <p className="nannyPropertiesText">
+                                            Characters:{' '}
                                             <span className="propertiesItemValue">
-                                                {nanny.characters}
+                                                {nanny.characters
+                                                    .map(
+                                                        word =>
+                                                            word.charAt(0).toUpperCase() + word.slice(1),
+                                                    )
+                                                    .join(', ')}
                                             </span>
                                         </p>
                                     </li>
                                     <li className="nannyPropertiesItem">
-                                        <p className='nannyPropertiesText'>
-                                            education:
+                                        <p className="nannyPropertiesText">
+                                            education:{' '}
                                             <span className="propertiesItemValue">
                                                 {nanny.education}
                                             </span>
@@ -92,13 +106,17 @@ const Nannies = () => {
                                 <p>
                                     <strong></strong> {nanny.about}
                                 </p>
+                                <Link to={`/nannies/${index}/reviews`}>Read more</Link>
                             </div>
+                            <Outlet />
                         </li>
+
                     ))}
                 </ul>
             ) : (
                 <p>Завантаження даних...</p>
             )}
+
         </div>
     );
 };
